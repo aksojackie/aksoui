@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Dynamic Content and Expandable Options</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 16.666667%;
+            padding: 20px;
+            border: 1px solid white;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar li a {
+            display: block;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar li a:hover {
+            background-color: #666;
+        }
+
+        .sidebar li.active {
+            background-color: #666;
+        }
+
+        .sidebar li.active ul {
+            display: none; /* Initially hidden */
+        }
+
+        .sidebar li.active ul li {
+            padding: 5px;
+            background-color: #999;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid white;
+        }
+
+        .content h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            line-height: 1.5;
+        }
+
+        #easy-connection.active .content {
+            display: block;
+        }
+
+        #easy-signup.active .content {
+            display: block;
+        }
+
+        #easy-order-check.active .content {
+            display: block;
+        }
+
+        #easy-daily-tasks.active .content {
+            display: block;
+        }
+
+        #alerts.active .content {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .content {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li id="easy-connection">
+                    <a href="#easy-connection">AksoPAY</a>
+                </li>
+                <li id="easy-signup"><a href="#easy-signup">admin(登出)</a></li>
+                <li id="easy-order-check"><a href="#easy-order-check">系統設定</a></li>
+                <li id="easy-daily-tasks"><a href="#easy-daily-tasks">合作夥伴</a></li>
+                <li id="alerts"><a href="#easy-daily-tasks">訂單</a></li>
+                <li id="alerts2"><a href="#alerts">查單參考</a></li>
+                <li id="alerts6"><a href="#alerts">BGC</a></li>
+                <li id="alerts3"><a href="#alerts">財務管理</a></li>
+                <li id="alerts4"><a href="#alerts">報表</a></li>
+                <li id="alerts5"><a href="#alerts">帳號建立</a></li>
+            </ul>
+        </div>
+
+        <div id="easy-connection" class="content">
+            <h2>BGC</h2>
+            <p>線路控制。模擬裝置列表。(跑分)銀行卡列表。(跑分)電子支付列表。(跑分)商家碼列表。</p>
+            <p>出款接單列表。出款作業列表。出款排程列表。沖正提醒列表。</p>
+            <h2>財務管理</h2>
+            <p>廠商資金凍結。商戶待結算資金列表。供應商待結算資金列表。</p>
+            <p>出款待指派列表。出款待審核列表。代理提款列表。供應商調帳申請。廠商可用餘額調整。</p>
+            <h2>報表</h2>
+            <p>[每日]交易統計。[每日]營收統計。</p>
+            <p>[即時]商戶渠道沖提統計。[即時]供應商渠道收付統計。[即時]代理獲利統計。[即時]供應商渠道收付總計。</p>
+            <p>申請報表資料。</p>
+            <h2>帳號建立</h2>
+            <p>帳號關係圖(此系統的代理，供應商，商戶)</p>
+            <p>一鍵創帳號(供應商代理‘供應商’商戶代理‘商戶)。</p>
+            <p>一鍵開渠道(供應商代理‘供應商’商戶代理‘商戶)。</p>
+            <p>一鍵指定線路(供應商代理‘供應商’商戶代理‘商戶)。</p>
+
+        </div>
+    </div>
+</body>
+</html>
