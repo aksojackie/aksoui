@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpage with Dynamic Content and Expandable Options</title>
+    <title>Demo1</title>
     <style>
+        /* 样式部分 */
         body {
             background-color: black;
             color: white;
@@ -71,95 +72,74 @@
         .content p {
             line-height: 1.5;
         }
-
-        #easy-connection.active .content {
-            display: block;
-        }
-
-        #easy-signup.active .content {
-            display: block;
-        }
-
-        #easy-order-check.active .content {
-            display: block;
-        }
-
-        #easy-daily-tasks.active .content {
-            display: block;
-        }
-
-        #alerts.active .content {
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                width: 100%;
-            }
-
-            .content {
-                margin-top: 20px;
-            }
-        }
     </style>
-    <script>
-window.embeddedChatbotConfig = {
-chatbotId: "aaqhZHrTljd1JgHXR2KnC",
-domain: "www.chatbase.co"
-}
-</script>
-<script
-src="https://www.chatbase.co/embed.min.js"
-chatbotId="aaqhZHrTljd1JgHXR2KnC"
-domain="www.chatbase.co"
-defer>
-</script>
+            <script>
+            window.embeddedChatbotConfig = {
+            chatbotId: "aaqhZHrTljd1JgHXR2KnC",
+            domain: "www.chatbase.co"
+            }
+            </script>
+            <script
+            src="https://www.chatbase.co/embed.min.js"
+            chatbotId="aaqhZHrTljd1JgHXR2KnC"
+            domain="www.chatbase.co"
+            defer>
+            </script>
 </head>
 <body>
 
-
-    <div class="container">
-        <div class="sidebar">
-            <ul>
-                <li id="easy-connection">
-                    <a href="#easy-connection">AksoPAY</a>
-                </li>
-                <li id="easy-signup"><a href="#easy-signup">admin(登出)</a></li>
-                <li id="easy-order-check"><a href="#easy-order-check">系統設定</a></li>
-                <li id="easy-daily-tasks"><a href="#easy-daily-tasks">合作夥伴</a></li>
-                <li id="alerts"><a href="#easy-daily-tasks">訂單</a></li>
-                <li id="alerts2"><a href="#alerts">查單參考</a></li>
-                <li id="alerts6"><a href="#alerts">BGC</a></li>
-                <li id="alerts3"><a href="#alerts">財務管理</a></li>
-                <li id="alerts4"><a href="#alerts">報表</a></li>
-                <li id="alerts5"><a href="UI-2.html">帳號建立</a></li>
-            </ul>
-        </div>
-
-        <div id="easy-connection" class="content">
-            <h2>AksoPAY</h2>
-            <p>手機監控掉線。餘額已滿方便下發。重複掃碼對象(3days)。 </p>
-            <h2>Admin</h2>
-            <p>有登出按鈕</p>
-            <h2>系統設定</h2>
-            <p>廠商後台帳號管理(all)。銀行列表。渠道列表。總後台登入IP管理。線路監控。應用程式腳本。系統參數。其他參數設定。</p>
-            <h2>合作夥伴</h2>
-            <p>代理管理。代理帳變紀錄(精準)。代理帳變紀錄(批次)。</p>
-            <p>供應商管理。供應商帳變紀錄(精準)。供應商帳變紀錄(批次)</p>
-            <p>商戶管理。商戶帳變紀錄(精準)。商戶帳變紀錄(批次)。</p>
-            <h2>訂單</h2>
-            <p>商戶充值訂單列表(精準)。商戶充值訂單列表(批次)。商戶提款訂單列表(精準)。商戶提款訂單列表(批次)。</p>
-            <p>供應商充值訂單列表(精準)。供應商充值訂單列表(批次)。供應商提款訂單列表(精準)。供應商提款訂單列表(批次)。</p>
-            <p>模擬裝置訂單列表</p>
-            <h2>查單參考</h2>
-            <p>簡訊接收列表(精準)。簡訊接收列表(批次)。銀行卡回單列表。 電子支付回單列表。商家碼回單列表。</p>
-
-        </div>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li id="easy-connection">
+                <a href="1-AksoPAY.html">1-AksoPAY</a>
+            </li>
+            <li id="#easy-signup"><a href="2-admin.html">2-admin(登出)</a></li>
+            <li id="#easy-signup"><a href="3-系統設定.html">3-系統設定</a></li>
+            <li id="#easy-signup"><a href="4-合作夥伴.html">4-合作夥伴</a></li>
+            <li id="#easy-signup"><a href="5-訂單.html">5-訂單</a></li>
+            <li id="#easy-signup"><a href="6-查單參考.html">6-查單參考</a></li>
+            <li id="#easy-signup"><a href="7-供應商.html">7-供應商</a></li>
+            <li id="#easy-signup"><a href="8-財務管理.html">8-財務管理</a></li>
+            <li id="#easy-signup"><a href="9-報表.html">9-報表</a></li>
+            <li id="#easy-signup"><a href="10-帳號建立.html">10-帳號建立</a></li>
+            <li id="#easy-signup"><a href="Demo-1.html">Demo1</a></li>
+            <li id="#easy-signup"><a href="Demo-2.html">Demo2</a></li>
+            <!-- 其他連結 -->
+        </ul>
     </div>
-</body>
 
+    <div id="content-placeholder" class="content">
+        <!-- 用于替換的占位符 -->
+    </div>
+</div>
+
+<!-- JavaScript 部分 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var links = document.querySelectorAll('.sidebar a');
+
+        links.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // 阻止默认链接行为
+                var href = this.getAttribute('href');
+                loadContent(href);
+            });
+        });
+
+        function loadContent(url) {
+            // 使用 AJAX 或其他方式加载链接指向的内容并将其替换到 content-placeholder 中
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("content-placeholder").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+    });
+</script>
+
+</body>
 </html>
