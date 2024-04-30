@@ -85,6 +85,21 @@
             domain="www.chatbase.co"
             defer>
             </script>
+                        <!-- 以下总体来说，这段代码的作用是当调用 showContent 函数并传入一个 URL 地址时，它会发送一个 GET 请求获取该 URL 对应的内容，并将其显示在页面上的 <div id="display"></div> 元素中。 -->
+            <script>
+                function showContent(url) {
+                    var displayDiv = document.getElementById("display");
+                    fetch(url)
+                        .then(response => response.text())
+                        .then(data => {
+                            displayDiv.innerHTML = data;
+                        })
+                        .catch(error => {
+                            console.error('Fetch Error:', error);
+                        });
+                }
+            </script>
+            <!-- 以上总体来说，这段代码的作用是当调用 showContent 函数并传入一个 URL 地址时，它会发送一个 GET 请求获取该 URL 对应的内容，并将其显示在页面上的 <div id="display"></div> 元素中。 -->
 </head>
 <body>
 
@@ -103,6 +118,7 @@
             <li id="#easy-signup"><a href="8-財務管理.html">8-財務管理</a></li>
             <li id="#easy-signup"><a href="9-報表.html">9-報表</a></li>
             <li id="#easy-signup"><a href="10-帳號建立.html">10-帳號建立</a></li>
+            <li id="#easy-signup"><a href="11-開發者.html">11-開發者</a></li>
             <li id="#easy-signup"><a href="Demo-1.html">Demo1</a></li>
             <li id="#easy-signup"><a href="Demo-2.html">Demo2</a></li>
             <!-- 其他連結 -->
