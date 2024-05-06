@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一鍵調整渠道</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        select {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .button2 {
+            padding: 10px 20px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button3 {
+            padding: 10px 20px;
+            background-color: #1a8e52;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- <h2>Account Management</h2> 這是英文版-->
+    <h2>代理渠道開關</h2>
+    <form id="accountForm1">
+        <label for="accountType">代理類型:</label>
+        <select id="accountType1" name="accountType">
+            <option value="merchant">商戶</option>
+            <option value="supplier">供應商</option>
+        </select>
+
+    </form>
+    <form id="accountForm4">
+        <label for="accountType">渠道類型:</label>
+        <select id="accountType4" name="accountType">
+            <option value="supplier">代收</option>
+            <option value="merchant">內充</option>
+            <option value="supplier">代付</option>
+            <option value="merchant">下發</option>
+        </select>
+
+    </form>
+    <form id="accountForm3">
+        <label for="accountType">渠道模組:</label>
+        <select id="accountType3" name="accountType">
+            <option value="supplier">007005001[QRPH-SBCM]</option>
+            <option value="merchant">007001001[Bank]</option>
+            <option value="supplier">007002001[GCash]</option>
+        </select>
+
+    </form>
+
+</div>
+<div class="container">
+    <!-- <h2>Account</h2> 這是英文版-->
+    <form id="accountForm2">
+        <label for="accountType">選擇帳戶:</label>
+        <select id="accountType2" name="accountType">
+            <option value="系統">Jack</option>
+            <option value="代理">Tim</option>
+            <option value="供應商">Kim</option>
+            <option value="商戶">Happy</option>
+        </select>
+        <br>
+        <button type="button" onclick="resetPassword()">Open</button>
+        <button class="button2" type="button" onclick="resetPassword2()">close</button>
+    </form>
+</div>
+<div class="container">
+    <!-- <h2>Account</h2> 這是英文版-->
+    <h2>渠道內容</h2>
+    <form id="accountForm3">
+        <label for="accountType5">帳戶名稱:</label>
+        <select id="accountType5" name="accountType5">
+            <option value="代理">代理(同上不可選)</option>
+            <!-- <option value="商戶">商戶</option>
+            <option value="供應商">供應商</option> -->
+        </select>
+        <button class="button3" type="button" onclick="openImage()">Settings</button>
+        <br>
+        <label for="accountType6">很多帳戶:</label>
+        <select id="accountType6" name="accountType6">
+            <option value="系統2">Jack</option>
+            <option value="代理2">Tim</option>
+            <option value="供應商2">Kim</option>
+            <option value="商戶2">Happy</option>
+        </select>
+        <br>
+        <button class="button3" type="button" onclick="openImage2()">Settings</button>
+        <button class="button2" type="button" onclick="openImage3()">指定線路(只有商戶出現)</button>
+    </form>
+</div>
+
+<script>
+    function resetPassword() {
+        var accountType = document.getElementById("accountType2").value;
+        var confirmation = confirm("您確定要將此渠道一鍵開啟嗎?");
+        if (confirmation) {
+            alert("一鍵開啟成功");
+            // 此处可以添加重置密码的逻辑
+        }
+    }
+</script>
+<script>
+    function resetPassword2() {
+        var accountType = document.getElementById("accountType2").value;
+        var confirmation = confirm("您確定要將此渠道一鍵關閉嗎?");
+        if (confirmation) {
+            alert("一鍵關閉成功");
+            // 此处可以添加重置密码的逻辑
+        }
+    }
+</script>
+<script>
+    function openImage() {
+      window.open('../img/代理渠道設定.jpg', '_blank');
+    }
+</script>
+<script>
+    function openImage2() {
+      window.open('../img/渠道設定.jpg', '_blank');
+    }
+</script>
+<script>
+    function openImage3() {
+      window.open('../img/指定線路.jpg', '_blank');
+    }
+</script>
+
+</body>
+</html>

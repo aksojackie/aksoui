@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>帳號管理系統</title>
+    <script>
+    // JavaScript代碼
+    function openImage() {
+        window.open('../img/一鍵代理.jpg', '_blank');
+    }
+    </script>
+    <script>
+    // JavaScript代碼
+    function openImage2() {
+        window.open('一鍵調整渠道.html', '_blank');
+    }
+    </script>
+    <script>
+            // JavaScript代碼
+            function openImage3() {
+                window.open('一鍵指定線路.html', '_blank');
+            }
+    </script>
+    <script>
+            // JavaScript代碼
+            function openImage4() {
+                window.open('../img/商戶添加.jpg', '_blank');
+            }
+    </script>
+    <script>
+            // JavaScript代碼
+            function openImage5() {
+                window.open('../img/供應商添加.jpg', '_blank');
+            }
+    </script>
+<style>
+/* CSS樣式 */
+/* Add your CSS styles here */
+.agent {
+    margin-bottom: 20px;
+}
+
+.sub-list {
+    margin-left: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.plus-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #007bff;
+}
+</style>
+</head>
+<body>
+
+<div class="agent">
+    <h2>商戶代理(全部)</h2>
+    <span>商戶代理Jackie</span>
+    <div class="sub-list">
+        <span>商戶1</span>
+        <span>商戶2</span>
+        <span>商戶3</span>
+        <span class="plus-icon" onclick="openImage4()">+</span>
+    </div>
+</div>
+
+<div class="agent">
+    <h2>供應商代理(全部)</h2>
+    <span>供應商代理jackie</span>
+    <div class="sub-list">
+        <span>供應商A</span>
+        <span>供應商B</span>
+        <span>供應商C</span>
+        <span class="plus-icon" onclick="openImage5()">+</span>
+    </div>
+</div>
+
+<button class="btn" onclick="openImage()">一鍵創建代理</button>
+<button class="btn" onclick="openImage2()">一鍵調整渠道</button>
+<button class="btn" onclick="openImage3()">指定線路列表</button>
+
+</body>
+</html>

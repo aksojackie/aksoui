@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        select {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- <h2>Account Management</h2> 這是英文版-->
+    <h2>帳號管理</h2>
+    <form id="accountForm1">
+        <label for="accountType">廠商類型:</label>
+        <select id="accountType1" name="accountType">
+            <option value="agent">代理</option>
+            <option value="supplier">供應商</option>
+            <option value="merchant">商戶</option>
+        </select>
+
+    </form>
+
+</div>
+<div class="container">
+    <!-- <h2>Account</h2> 這是英文版-->
+    <form id="accountForm2">
+        <label for="accountType">選擇帳戶:</label>
+        <select id="accountType2" name="accountType">
+            <option value="系統">Jack</option>
+            <option value="代理">Tim</option>
+            <option value="供應商">Kim</option>
+            <option value="商戶">Happy</option>
+        </select>
+        <button type="button" onclick="resetPassword()">Reset Password</button>
+    </form>
+</div>
+<div class="container">
+    <!-- <h2>Account</h2> 這是英文版-->
+    <h2>系統</h2>
+    <form id="accountForm3">
+        <label for="accountType">選擇帳戶:</label>
+        <select id="accountType3" name="accountType">
+            <option value="系統2">Jack</option>
+            <option value="代理2">Tim</option>
+            <option value="供應商2">Kim</option>
+            <option value="商戶2">Happy</option>
+        </select>
+        <button type="button" onclick="openImage()">Reset Information</button>
+    </form>
+</div>
+
+<script>
+    function resetPassword() {
+        var accountType = document.getElementById("accountType2").value;
+        var confirmation = confirm("您確定要將此帳戶重設密碼嗎?");
+        if (confirmation) {
+            alert("密碼重設完畢");
+            // 此处可以添加重置密码的逻辑
+        }
+    }
+</script>
+<script>
+    function openImage() {
+      window.open('../img/系統改密碼.jpg', '_blank');
+    }
+</script>
+
+</body>
+</html>

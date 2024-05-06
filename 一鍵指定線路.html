@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指定線路列表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        select {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .button2 {
+            padding: 10px 20px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- <h2>Account Management</h2> 這是英文版-->
+    <h2>指定線路列表</h2>
+    <form id="accountForm1">
+        <label for="accountType">商戶代理:</label>
+        <select id="accountType1" name="accountType">
+            <option value="supplier">Jack</option>
+            <option value="merchant">Tim</option>
+        </select>
+
+    </form>
+    <form id="accountForm4">
+        <label for="accountType">商戶帳號:</label>
+        <select id="accountType4" name="accountType">
+            <option value="supplier">JackM</option>
+            <option value="merchant">TimM</option>
+            <option value="supplier">CatM</option>
+            <option value="merchant">WowM</option>
+        </select>
+        <br>
+        <button type="button" onclick="商戶渠道資訊()">商戶渠道資訊</button>
+        <button class="button2" type="button" onclick="已指定供應商()">已指定供應商</button>
+    </form>
+
+
+</div>
+
+
+
+<script>
+    function 商戶渠道資訊() {
+      window.open('../img/商戶渠道資訊.jpg', '_blank');
+    }
+</script>
+<script>
+    function 已指定供應商() {
+      window.open('已指定供應商.html', '_blank');
+    }
+</script>
+<script>
+    function openImage() {
+      window.open('../img/代理渠道設定.jpg', '_blank');
+    }
+</script>
+<script>
+    function openImage2() {
+      window.open('../img/渠道設定.jpg', '_blank');
+    }
+</script>
+
+</body>
+</html>
