@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .circle-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        .circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .circle-green {
+            background-color: #4caf50; /* 綠色 */
+            color: #fff;
+        }
+        .circle-red {
+            background-color: #f44336; /* 紅色 */
+            color: #fff;
+        }
+        .circle-text {
+            z-index: 2;
+        }
+        .circle-text span {
+            display: block;
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 10px;
+        }
+        .info-container {
+            width: 100%;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        .info {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .info h2 {
+            color: #58a3ce; /* 藍色 */
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .info li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 昨日營收的代收及代付圓圈 -->
+    <div class="circle-container">
+        <div class="circle circle-text">
+            <div class="circle-text">繁(切換)<br>市場(PHP)<br>台灣地區IP</div>
+        </div>
+        <div class="circle circle-green">
+            <div class="circle-text">昨日代收款<br>60%<br>$30K</div>
+        </div>
+        <div class="circle circle-red">
+            <div class="circle-text">昨日代付款<br>40%<br>$20K</div>
+        </div>
+    </div>
+
+    <!-- 六個信息列表 -->
+    <div class="info-container">
+        <div class="info">
+            <h2>手機監控掉線卡片(篩選供應商)</h2>
+            <ul>
+                <li>0912XXXXXX - 供應商A</li>
+                <li>0955XXXXXX - 供應商B</li>
+                <li>0988XXXXXX - 供應商C</li>
+            </ul>
+        </div>
+        <div class="info">
+            <h2>卡片餘額已滿列表</h2>
+            <ul>
+                <li>供應商A-A卡</li>
+                <li>供應商D-B卡</li>
+            </ul>
+        </div>
+        <div class="info">
+            <h2>重複掃碼對象列表（3天內）</h2>
+            <ul>
+                <li>0912XXXXXX，共2筆[1筆300元，尚未配對]</li>
+                <li>0955XXXXXX，共3筆[1筆555元，1筆444元，尚未配對]</li>
+                <li>0988XXXXXX，共2筆[1筆666元，尚未配對]</li>
+                <li>0912XXXXXX，共2筆[1筆777元，尚未配對]</li>
+            </ul>
+        </div>
+        <div class="info">
+            <h2>平台是否正在維護</h2>
+            <p style="color: green;">正常運行</p>
+        </div>
+        <div class="info">
+            <h2>正在上線中的卡片(篩選供應商)</h2>
+            <ul>
+                <li>0912XXXXXX- 供應商A</li>
+                <li>0955XXXXXX- 供應商B</li>
+                <li>0988XXXXXX- 供應商B</li>
+            </ul>
+        </div>
+        <div class="info">
+            <h2>出款待指派列表</h2>
+            <ul>
+                <li>交易編號: 123456</li>
+                <li>交易編號: 789012</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
